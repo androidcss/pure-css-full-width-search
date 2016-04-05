@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<META NAME="ROBOTS" CONTENT="NOINDEX, FOLLOW">
+<title>Pure CSS full width search demo</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<style type="text/css">
+* {
+	padding:0;
+	margin:0;
+}
+
+body {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	background-color:#FFF;
+}
+
+header {
+	width:100%;
+	z-index:1000;
+}
+
+.clear{
+	clear:both;
+}
+
+#tag-search {
+	display:none;
+}
+
+.wrapper-right{
+	float:right;
+}
+
+.search-icon{
+	padding:20px;
+	cursor:pointer;
+	background-color:#EEE;
+}
+
+.search-box{
+	position:relative;
+	background-color:#EEE;
+	padding:10px;
+	clear:both;
+	transform: scale(0);
+	transform-origin: 100% 0%;
+	display:none;
+}
+
+.search-box i{
+	position:absolute;
+	font-size:30px;
+	vertical-align:middle;
+	padding:10px;
+}
+
+input[type="text"]
+{
+	width:100%;
+	height:50px;
+	font-size:30px;
+	background-color:#EEE;
+	border:none;
+	padding-left:50px;
+	box-sizing:border-box;
+}
+
+input:focus{
+	outline:none;
+}
+
+#tag-search:checked + div.search-box {
+	display:block;
+ animation: trans-in 1s ease;
+ animation-fill-mode: forwards;
+}
+
+@keyframes trans-in {
+ from {transform: scaleY(0);}
+ to {transform: scaleY(1);}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrapper">
+    <!-- Removable heading -->
+  	<div style="float:left;">
+    <a href="http://androidcss.com" title="androidcss" rel="home" style="font-size:24px;padding:12px;text-decoration:none;color:#FFF;display:block;"><span style="color:#690">Android</span><span style="color:#333">CSS</span></a>
+    </div>
+    <!-- End -->
+    <div class="wrapper-right">
+    <!-- Removable Tutorial link -->
+    <a href="http://androidcss.com/css/pure-css-full-width-search/‎" style="color:#FFF;font-size:16px;color:#333;margin-right:10px;">Tutorial</a>
+    <!-- End -->
+      <label class="fa fa-search search-icon" for="tag-search"></label>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <input type="checkbox" id="tag-search"/>
+  <div class="search-box"> <i class="fa fa-search"></i>
+    <input type="text" placeholder="Search..."/>
+  </div>
+</header>
+<!-- Removable Heading -->
+<h1 style="margin:15px;text-align:center;font-size:30px;">Pure css full width search bar with animation</h1>
+<!-- End -->
+</body>
+</html>
